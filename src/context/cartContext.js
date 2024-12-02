@@ -29,10 +29,10 @@ export const CartProvider = ({ children }) => {
     }
 
     
-    const modifyCartList = (modifiedItem) => {
+    const modifyCartList = (id, amount) => {
         setCartList((prevState) => {
             return prevState.map((item) => {
-                return { ...item, amount: item.id === modifiedItem.id ? modifiedItem.amount : item.amount }
+                return { ...item, amount: item.id === id ? amount : item.amount }
             })
         })
     }

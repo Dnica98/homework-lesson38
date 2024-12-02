@@ -6,3 +6,13 @@
     gap: 16px;
     flex-wrap: wrap;
 }
+
+.banner{
+    position: absolute;
+    top: 16px;
+    border: 1px solid var(--primary-color);
+    padding: 32px;
+    left: 45%;
+    background-color: beige;
+    border-radius: 40px;
+}

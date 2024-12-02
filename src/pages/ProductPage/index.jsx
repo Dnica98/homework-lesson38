@@ -19,7 +19,7 @@ const ProductPage = () => {
     return(
         <div className="product-page">
             <div className="product-page-img">
-                <img src={product.img} />
+                <img src={product.img} alt={`${product.title} image`} />
             </div>
             <div className="product-page-details">
                 <Typography>{product.title}</Typography>

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Card from '../../Components/Card';
 import Typography from '../../Components/Typography';
 
@@ -9,11 +9,21 @@ import { CartContext } from "../../context/cartContext";
 const ShopPage = () => {
     const {products, getProducts} = useContext(ProductContext)
     const {handleAddToCard}= useContext(CartContext)
+    const [showBanner, setShowBanner] =useState(false)
+
 
     useEffect(() => {
         getProducts()
     }, [])
 
+    const handleAction = (item) => {
+        handleAddToCard(item)
+        setShowBanner(true)
+
+        setTimeout(() => {
+            setShowBanner(false)
+        }, 1000)
+    }
     return (
         <div>
             <Typography>Shop</Typography>
@@ -25,10 +35,15 @@ const ShopPage = () => {
                         price={price}
                         img={img}
                         id={id}
-                        iconOnClick={(amount) => handleAddToCard({title, price, img, id, amount})}
+                        iconOnClick={(amount) => handleAction({title, price, img, id, amount})}
                     />
                 })}
             </div>
+            {showBanner && (
+                <div className="banner">
+                Item eas succesfully added to your cart!
+                </div>
+            ) }
         </div>
     )
 }

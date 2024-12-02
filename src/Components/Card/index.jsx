@@ -31,7 +31,7 @@ const Card = ({ title, img, price, id, iconOnClick }) => {
         <div className="card-wrapper" onClick={handleClick}>
             <img src={img} alt={`${title} image`} className="card-img" />
             <Typography>{title}</Typography>
-            <Typography>{price} $</Typography>
+            <Typography>{price} $/kg</Typography>
 
             <div onClick={(e) => e.stopPropagation()} className="card-input">
                 <div onClick={handleChangeAmount}>

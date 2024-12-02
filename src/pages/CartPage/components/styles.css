@@ -1,0 +1,22 @@
+
+
+.list-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+        margin: 0;
+
+    }
+
+    input {
+        width: 50px;
+    }
+
+    button{
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+}
