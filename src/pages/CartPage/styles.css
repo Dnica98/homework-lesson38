@@ -1,0 +1,19 @@
+
+
+.cart-input {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    input {
+        width: 20px;
+    }
+}
+
+.removeBtn{
+    background-color: NONE;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border: 1px solid;
+    border-color: var(--primary-color);
+    border-radius: 4px;
+}

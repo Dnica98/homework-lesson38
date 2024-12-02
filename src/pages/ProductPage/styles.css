@@ -1,0 +1,17 @@
+
+
+.product-page {
+    display: flex;
+    margin: 120px 48px;
+    gap: 32px
+}
+
+.product-page-img {
+    width: 35vw;
+}
+
+.product-page-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
